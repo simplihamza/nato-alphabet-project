@@ -9,6 +9,7 @@ A Python program that converts any word into its NATO phonetic alphabet equivale
 - Takes any word or name as user input
 - Converts each letter into its corresponding NATO phonetic code word using a list comprehension
 - Prints the full phonetic spelling of the input word
+- Handles invalid input gracefully; if a character isn't part of the NATO alphabet (e.g. punctuation or spaces), the user is prompted to try again instead of the program crashing
 
 ## How to Run
 1. Clone or download this repository to your device.
@@ -31,3 +32,6 @@ Before writing this project's actual logic, I spent time practicing list and dic
 - Building a dictionary using dictionary comprehension as a fast lookup table
 - Converting user input into a transformed list using list comprehension
 - Filtering out invalid characters (e.g., spaces or symbols not in the alphabet) directly within the list comprehension
+- Using `try`/`except` to catch and handle a `KeyError` gracefully instead of letting the program crash
+- Using a `while True` loop with `break` to keep retrying an operation until it succeeds
+- Debugging a scope-related bug where a variable was referenced outside the `try` block where it was assigned, causing a `NameError` when the assignment failed
